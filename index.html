@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>কাজের হিসাব</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>কাজের হিসাব</h1>
+  <p>এই অ্যাপের মাধ্যমে কাজের দৈনিক হিসাব রাখা যাবে।</p>
+
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(function(registration) {
+          console.log('Service Worker নিবন্ধিত হয়েছে:', registration.scope);
+        })
+        .catch(function(error) {
+          console.log('Service Worker নিবন্ধনে ব্যর্থ:', error);
+        });
+    }
+  </script>
+</body>
+</html>
